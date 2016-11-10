@@ -1,0 +1,24 @@
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<style>
+  p{
+    text-align: center;
+    display:block;
+    white-space:nowrap;
+    overflow:hidden; 
+    text-overflow:ellipsis;
+  }
+</style>
+<h2>{{list.name}}</h2>
+<div class="row" ng-controller="theme">
+  <div class="col-sm-3 col-md-2" ng-repeat="v in list.stories">
+    <div class="thumbnail" style="width:200px;height:200px;" >
+      <img src="{{v.images[0]}}" alt="...">
+      <div class="caption">
+        <p><a href="#/show/{{v.id}}">{{v.title}}</a></p>
+    <!--     <button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">
+  阅读更多
+</button> -->
+      </div>
+    </div>
+  </div>
+</div>

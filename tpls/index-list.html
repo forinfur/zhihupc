@@ -1,0 +1,20 @@
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<style>
+  p{
+    text-align: center;
+    display:block;
+    white-space:nowrap;
+    overflow:hidden; 
+    text-overflow:ellipsis;
+  }
+</style>
+<div class="row" ng-controller="newMsg">
+  <div class="col-sm-3 col-md-2" ng-repeat="v in list">
+    <div class="thumbnail" >
+      <img src="{{v.images[0]}}" alt="...">
+      <div class="caption">
+        <p><a href="#/show/{{v.id}}">{{v.title}}</a></p>
+      </div>
+    </div>
+  </div>
+</div>
